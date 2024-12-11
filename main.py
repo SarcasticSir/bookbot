@@ -1,8 +1,17 @@
+# Function to open text file
+def open_book(path): # path to text file
+    with open(path) as f: 
+        return f.read() 
+    
+    
+def count_words(text):
+    words = text.split()
+    return len(words)
+
 def main():
-    with open("books/Frankenstein.txt") as f:
-        # Åpner frankenstein tror jeg
-        file_contents = f.read()
-        print(file_contents)
-        words = file_contents.split()
-        print(len(words))
+    path = "books/Frankenstein.txt"
+    text = open_book(path)
+    word_count = count_words(text)
+    print()
+    print(f"The number of words are {word_count}")
 main()
