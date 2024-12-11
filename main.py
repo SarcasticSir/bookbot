@@ -18,8 +18,16 @@ def count_words(text):
     return len(words)
 
 def main():
+    
     path = "books/Frankenstein.txt"
-    text = open_book(path)
+    
+    try:    
+        text = open_book(path)
+    except (FileNotFoundError, OSError):
+        print("File not found. Please check the file path and try again. Exiting...")
+        return
+    
+
     word_count = count_words(text)
     title = get_title(path)
 
