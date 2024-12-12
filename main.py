@@ -12,7 +12,7 @@ def get_title(path):
     title, _ = os.path.splitext(filename)
     return title
     
-    
+# Separates text by whitespace and counts the total    
 def count_words(text):
     words = text.split()
     return len(words)
@@ -31,8 +31,10 @@ def main():
     word_count = count_words(text)
     title = get_title(path)
 
-    print(f"Counting the words in {title}")
+    print(f"Counting the words in '{title}'")
     input("Press Enter to show results")
     print()
     print(f"The number of words are {word_count}")
+
+
 main()
