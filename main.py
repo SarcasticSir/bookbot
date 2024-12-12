@@ -19,7 +19,7 @@ def count_words(text):
 
 def main():
     
-    path = "books/Frankenstein.txt"
+    path = input("Please enter the path to the text file: ")
     
     try:    
         text = open_book(path)
