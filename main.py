@@ -17,6 +17,12 @@ def count_words(text):
     words = text.split()
     return len(words)
 
+# Makes text lowercase
+def make_lowercase(text):
+    lowercase_text = text.lower()
+    return lowercase_text
+
+
 def main():
     
     path = input("Please enter the path to the text file: ")
@@ -35,6 +41,7 @@ def main():
     input("Press Enter to show results")
     print()
     print(f"The number of words are {word_count}")
+    print("Success")
 
 
 main()
