@@ -33,10 +33,18 @@ def main():
         print("File not found. Please check the file path and try again. Exiting...")
         return
     
+    
+    lowercase_text = text.lower()
+    lowerdict = {}
+    for n in lowercase_text:
+        lowerdict[n] = lowerdict.get(n, 0) + 1
+    print(lowerdict)
+    print()
 
+    
     word_count = count_words(text)
     title = get_title(path)
-
+    # Her skal det inn en funksjon som teller lowercase bokstaver
     print(f"Counting the words in '{title}'")
     print()
     print(f"The number of words are {word_count}")
