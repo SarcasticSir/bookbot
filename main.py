@@ -25,7 +25,7 @@ def make_lowercase(text):
 
 def main():
     
-    path = input("Please enter the path to the text file: ")
+    path = ("testkontor/javielsker.txt")
     
     try:    
         text = open_book(path)
@@ -38,7 +38,6 @@ def main():
     title = get_title(path)
 
     print(f"Counting the words in '{title}'")
-    input("Press Enter to show results")
     print()
     print(f"The number of words are {word_count}")
     print("Success")
