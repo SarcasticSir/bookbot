@@ -32,23 +32,35 @@ def main():
     except (FileNotFoundError, OSError):
         print("File not found. Please check the file path and try again. Exiting...")
         return
+
+
+    word_count = count_words(text)
+    title = get_title(path)
     
-    
+
+    print(f"--- Beginning analysis of {title} ---")
+    print(    )
+    print(f'Counting the words in "{title}"')
+    print()
+    print(f"The number of words found in {title} is: {word_count}.")
+
+
     lowercase_text = text.lower()
     lowerdict = {}
     for n in lowercase_text:
         lowerdict[n] = lowerdict.get(n, 0) + 1
-    print(lowerdict)
+
+    sorted_characters = sorted(lowerdict.items(), key=lambda item: item[1], reverse=True)
+    print("Below is the frequency each character was used:")
+    print()
+    for char, count in sorted_characters:
+        print(f"'{char}'was found: {count} time(s)")
+    
     print()
 
-    
-    word_count = count_words(text)
-    title = get_title(path)
-    # Her skal det inn en funksjon som teller lowercase bokstaver
-    print(f"Counting the words in '{title}'")
-    print()
-    print(f"The number of words are {word_count}")
     print("Success")
+    print()
+    print("--- End report ---")
 
 
 main()
