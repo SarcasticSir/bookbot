@@ -25,7 +25,7 @@ def make_lowercase(text):
 
 def main():
     
-    path = ("testkontor/javielsker.txt")
+    path = ("books/Frankenstein.txt")
     
     try:    
         text = open_book(path)
